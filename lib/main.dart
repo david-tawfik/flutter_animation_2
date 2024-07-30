@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'animated_container.dart';
-import 'animated_positioned.dart';
+import 'tween_container.dart';
+import 'tween_positioned.dart';
 import 'tween_opacity.dart';
+import 'tween_scale.dart';
 
 void main() {
   runApp(MyApp());
@@ -63,6 +64,17 @@ class _TweenAnimationExampleState extends State<TweenAnimationExample> {
               );
             },
             child: const Text('Change Position'),
+          ),
+                              const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const TweenScale()),
+              );
+            },
+            child: const Text('Change Scale'),
           ),
         ],
       ),
