@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'animated_container.dart';
 import 'tween_opacity.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -34,11 +36,21 @@ class _TweenAnimationExampleState extends State<TweenAnimationExample> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) => const TweenOpacity()),
+                MaterialPageRoute(builder: (context) => const TweenOpacity()),
               );
             },
-            child: const Text('Animated Container'),
+            child: const Text('Change Opacity'),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => TweenContainer()),
+              );
+            },
+            child: const Text('Change Color'),
           ),
         ],
       ),
