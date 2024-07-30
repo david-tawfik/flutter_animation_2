@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'animated_container.dart';
+import 'animated_positioned.dart';
 import 'tween_opacity.dart';
 
 void main() {
@@ -51,6 +52,17 @@ class _TweenAnimationExampleState extends State<TweenAnimationExample> {
               );
             },
             child: const Text('Change Color'),
+          ),
+                    const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const TweenPositioned()),
+              );
+            },
+            child: const Text('Change Position'),
           ),
         ],
       ),
