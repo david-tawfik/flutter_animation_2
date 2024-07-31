@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation_2/curve_animation.dart';
 import 'package:flutter_animation_2/tween_rotate.dart';
 import 'tween_container.dart';
+import 'animated_icon.dart';
+import 'tween_multi_property.dart';
 import 'tween_positioned.dart';
 import 'tween_opacity.dart';
 import 'tween_scale.dart';
+import 'tween_shape.dart';
+import 'tween_size.dart';
 
 void main() {
   runApp(MyApp());
@@ -84,6 +89,57 @@ class _TweenAnimationExampleState extends State<TweenAnimationExample> {
               );
             },
             child: const Text('Rotate'),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const TweenSize()),
+              );
+            },
+            child: const Text('Animate Size'),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const TweenShape()),
+              );
+            },
+            child: const Text('Animate Shape'),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const TweenMultiProperty()),
+              );
+            },
+            child: const Text('Multiple Property Animation'),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CurveAnimation()),
+              );
+            },
+            child: const Text('Curve'),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AnimatedIconWidget()),
+              );
+            },
+            child: const Text('Animated Icon Example'),
           ),
         ],
       ),
